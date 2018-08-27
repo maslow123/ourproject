@@ -1,0 +1,150 @@
+body {
+    font-family: 'Source Sans Pro';
+    margin:0;
+    color:black;
+    background:#32CD32;
+}
+
+.container h1{
+    font-size:2.4em;
+    font-family:'Brush Script MT';
+    text-shadow: 2px 2px 4px #fff;
+    text-align:right;
+    margin:20px;
+    text-decoration: underline;
+}
+
+.container h2{
+    width:400px;
+    font-size:21px;
+    font-family:'Open Sans', sans-serif;
+    color :#000;
+}
+
+a {
+    text-decoration:none;
+    color:red;
+    font-size:14px;
+    font-weight:700;
+}
+
+.icon { 
+    width:150px;
+    margin-top:-40px;
+    float:right;
+}
+
+header {
+    background:#FFFFFF;
+    padding: 1em;
+}
+
+footer {background:#32C237;}
+
+ul {margin:0;padding:0;}
+
+ul li {
+    padding: 2em;
+    color:#E98A8A;
+}
+
+ul li span {
+    display:block;
+    font-size:20px;
+    margin-bottom:1em;
+    color: white;
+}
+
+.container {
+    display: grid;
+    grid-template-columns: 66% auto;
+    padding: 0em 1em;
+}
+
+ul {
+    display: grid;
+    list-style-type:none;
+    margin:0;
+    padding:0;
+    grid-template-columns: 630px 1fr ;
+}
+
+    /* this is first border content */
+footer .first-content{
+    border:5px inset #006400;
+    height:auto;
+}
+
+    /* this is second border content */
+footer .second-content{
+    margin-left:0.2em;
+    border:5px inset #006400;
+}
+
+#category-menu{
+    max-width:250px;
+    margin-top:10px
+    }
+    /* we remove the margin, padding and list styles of the ul li list */
+#category-menu ul, #category-menu ul li{
+    margin:0;
+    padding:0;
+    list-style:none;
+    }
+
+    /* Adding the border to the parent ul and remove the border bottom */
+#category-menu > ul{
+    width:0px;
+    margin-left:-28px;
+    background:none;
+    display:grid;
+    }
+
+    /* Apply border bottom to the first level of li list only */
+#category-menu > ul > li {
+    width:595px;
+    }
+
+    /* Styling for all links inside the category menu */
+#category-menu ul li a{
+    font-size:1.5em ;
+    font-family:'Times New Roman';
+    color:#b6df88;
+    text-decoration:none;
+    display:inline-block;
+    width:600px;
+    cursor:pointer;
+    padding-left:18px;
+    }
+
+    /* set the padding space and position for all li list */
+#category-menu ul li{
+    padding:5px 10px;
+    position:relative;
+    font-size:17px;
+    color:#b6df88;
+    font-family: 'Sans serif';
+    }
+    
+    /* hiding the ul 2nd and 3rd levels */
+#category-menu ul li ul, #category-menu ul li ul li ul{
+    display:none;
+    padding-left:18px;
+    }
+
+    /* styling the arrows style */
+span.arrow, span.arrow-right{
+    background:url(right.png) no-repeat;
+    width:50px;
+    height:50px;
+    display:inline-block;
+    position:absolute;
+    right:570px;
+    }
+    
+span.arrow-down{
+    background:url(dwn.png) no-repeat;
+    width:50px;
+    height:50px;
+    transition: 1s;
+    }
