@@ -1,15 +1,15 @@
 <!DOCTYPE html>
-<?php include 'config.php'  ?>
+<?php include 'js/connection.php'  ?>
 <html class="no-js" lang="en">
     <head>
         <title>index</title>
         <meta http-equiv="x-ua-compatible" content="ie=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <script src="jquery/jquery.js"></script>
+        <script src="js/conf.js"></script>
+        <link media="all" type="text/css" rel="stylesheet" href="style.css">
         <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,700" rel="stylesheet">
         <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
-        <link media="all" type="text/css" rel="stylesheet" href="style.css">
-        <script src="jquery.js"></script>
-        <script src="conf.js"></script>
     </head>
     <body>
         <div class="container">
@@ -18,7 +18,7 @@
             </h2>
             <div id="content">
                 <h1>Ru-Jak</h1>
-                <img src="bus.png" class="icon"/>
+                <img src="image/bus.png" class="icon"/>
             </div>
         </div>
         <footer>
@@ -39,9 +39,15 @@
       //get data on database
                                  foreach($rows as $a){ 
                                   echo"<li style='border-bottom:2px solid black;width:550px;'>";
-                                  echo '<img src=angkot.png style=width:150px;float:left;margin-top:-10px;><div style=margin-top:25px;margin-right:-25px;>'.$a['cilengsi-bandung'].'<BR />Cileungsi - Bandung</div></li><li></li>';
+                                  echo '<img src=image/angkot.png style=width:150px;float:left;margin-top:-10px;><div style=margin-top:25px;margin-right:-25px;>'.$a['cilengsi-bandung'].'<BR />Cileungsi - Bandung</div><form method=post enctype=multipart/form-data><button name=btn style=margin-left:150px;>btn</button></form></li><li></li>';
                                 }
-                              ?>                            
+                                if(isset($_POST['btn']))
+                                {
+                                  $saddr = "bandung"; //Add dari db belum
+                                  $daddr = "jonggol"; //Add dari db belum
+                                  include_once ('direction.php'); //Belum sama folder
+                                }
+                              ?>
                             </ul>
                           </li><ol></ol>
                           <li><a>Angkot 69</a>
