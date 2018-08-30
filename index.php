@@ -64,8 +64,16 @@
               </div>
                 <div class="second-content">
                   <li>
-                      <span align="center"style="margin-top:-20px; padding-bottom:10px;">MAP<hr></span>
-                      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d26684.53335052234!2d106.84209976280103!3d-6.173631583310402!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e69f5b4e0083389%3A0x3e2f883abd070270!2sTerminal+Senen!5e0!3m2!1sid!2sid!4v1535004992568" width="550" height="450" frameborder="0" style="border:1px solid green" allowfullscreen></iframe>        
+                      <span align="center"style="margin-top:-20px; padding-bottom:10px;">PETA GOOGLE MAPS<hr></span>
+                      <div class='span8'>
+                        <?php
+                          if(isset($_POST['btn'])) {
+                            $saddr = "cileungsi";
+                            $daddr = "bogor";
+                            include_once ('direction.php');
+                          }
+  ?>
+            </div>        
                  </li>
                 </div>
                   <li> <!-- Ulangi lagi tiga kali sehingga sekarang kita punya 6 list --></li>
