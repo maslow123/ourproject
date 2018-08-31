@@ -2,8 +2,8 @@
 <?php include 'js/connection.php'  ?>
 <html class="no-js" lang="en">
     <head>
+        <meta charset="utf-8">
         <title>index</title>
-        <meta http-equiv="x-ua-compatible" content="ie=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <script src="jquery/jquery.js"></script>
         <script src="js/conf.js"></script>
@@ -37,15 +37,9 @@
                                 while($row = mysql_fetch_array($query_sql))
                                  $rows[] = $row;                             
       //get data on database
-                                 foreach($rows as $a){ 
+                                 foreach($rows as $direction){ 
                                   echo"<li style='border-bottom:2px solid black;width:550px;'>";
-                                  echo '<img src=image/angkot.png style=width:150px;float:left;margin-top:-10px;><div style=margin-top:25px;margin-right:-25px;>'.$a['cilengsi-bandung'].'<BR />Cileungsi - Bandung</div><form method=post enctype=multipart/form-data><button name=btn style=margin-left:150px;>btn</button></form></li><li></li>';
-                                }
-                                if(isset($_POST['btn']))
-                                {
-                                  $saddr = "bandung"; //Add dari db belum
-                                  $daddr = "jonggol"; //Add dari db belum
-                                  include_once ('direction.php'); //Belum sama folder
+                                  echo '<img src=image/angkot.png style=width:150px;float:left;margin-top:-10px;><div style=margin-top:25px;margin-right:-25px;>'.$direction['cilengsi-bandung'].'<BR />Cileungsi - Bandung</div><form method="post" enctype=multipart/form-data action="index.php"><button type="submit" name="btn2" style=margin-left:150px;>btn</button></form></li><li></li>';
                                 }
                               ?>
                             </ul>
@@ -53,8 +47,8 @@
                           <li><a>Angkot 69</a>
                             <ul class='ul-subcategory'>
                               <?php 
-                                foreach($rows as $a){
-                                   echo '<li>'.$a['angkot69'].'</li><li></li>';}
+                                foreach($rows as $direction){
+                                   echo '<li>'.$direction['angkot69'].'</li><li></li>';}
                               ?>
                             </ul>
                           </li>
@@ -65,15 +59,19 @@
                 <div class="second-content">
                   <li>
                       <span align="center"style="margin-top:-20px; padding-bottom:10px;">PETA GOOGLE MAPS<hr></span>
-                      <div class='span8'>
-                        <?php
-                          if(isset($_POST['btn'])) {
+                      <div class="container-narrow">
+                        <p class='lead'>
+                          Rute  Google maps
+                        </p>
+                        <div class='span8'>
+                          <?php
+                            if(isset($_POST['btn2'])) {
                             $saddr = "cileungsi";
                             $daddr = "bogor";
                             include_once ('direction.php');
-                          }
-  ?>
-            </div>        
+                          }?>
+                        </div>
+                      </div>
                  </li>
                 </div>
                   <li> <!-- Ulangi lagi tiga kali sehingga sekarang kita punya 6 list --></li>

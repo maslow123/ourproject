@@ -95,7 +95,7 @@ footer .second-content{
     /* Adding the border to the parent ul and remove the border bottom */
 #category-menu > ul{
     width:0px;
-    margin-left:-28px;
+    margin-left:-20px;
     background:none;
     display:grid;
     }
@@ -148,6 +148,37 @@ span.arrow-down{
     height:50px;
     transition: 1s;
     }
+/*custom map ready from now ! */
 .span8{
     width:315px;
 }
+.container-narrow {
+    max-width: 315px;
+            }
+/* Main marketing message and sign up button */
+.jumbotron {
+    margin: 60px 0;
+    text-align: center;
+}
+.jumbotron h1 {
+    font-size: 21px;
+    line-height: 1;
+}
+.jumbotron .btn {
+    font-size: 21px;
+    padding: 14px 24px;
+}
+/* Supporting marketing content */
+.marketing {
+    margin: 10px 0;
+}
+.marketing p + h4 {
+    margin-top: 28px;
+}
+.lead{
+    color:#fff;
+    font-size:21px;
+    font-weight:200;
+    line-height:10px;
+}
+/* custom a button */
