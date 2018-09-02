@@ -9,7 +9,7 @@
 <body style="font-family: Arial; font-size: 14px;"> 
  <div class='row'>
  	  <div id="panel"   style="width: 250px; float:left; "></div> 
-     <div id="map"  style="width: 310px; height: 700px; float:left; margin-top:-1245px; margin-left:280px;"></div> 
+     <div id="map"  style="width: 300px; height: 700px; float:left;margin-top:-1243px; margin-left:290px; "></div> 
  </div>  
 
   
