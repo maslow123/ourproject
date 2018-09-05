@@ -4,14 +4,14 @@
    <meta http-equiv="content-type" content="text/html; charset=UTF-8"/> 
    <title>Peta</title> 
    <script type="text/javascript" 
-           src="http://maps.google.com/maps/api/js?sensor=false"></script>
+           src="http://maps.google.com/maps/api/js?sensor=true"></script>
 </head> 
 <body style="font-family: Arial; font-size: 14px;"> 
  <div class='row'>
- 	  <div id="panel"   style="width: 250px; float:left; "></div> 
-     <div id="map"  style="width: 310px; height: 700px; float:left; margin-top:-1245px; margin-left:280px;"></div> 
- </div>  
-
+ 	  <div id="panel"   style="width: 300px; float:left;"></div> 
+     <div id="map"  style="width: 300px; height: 500px;float:left; margin-top:-1010px; margin-left:310px;"></div> 
+   
+</div>
   
 
    <script type="text/javascript"> 

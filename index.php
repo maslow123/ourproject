@@ -12,7 +12,7 @@
         <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
     </head>
     <body>
-       <form class="form-inline" action='index.php' method='POST'>
+       <form class="form-inline" action="index.php" method="POST">
           <div class="container">
             <h2 class="value">
               Welcome to our website !
@@ -40,7 +40,8 @@
       //get data on database
                                   foreach($rows as $direction){ 
                                   echo"<li style='border-bottom:2px solid black;width:550px;'>";
-                                  echo "<img src=image/angkot.png style=width:150px;float:left;margin-top:-10px;><div style=margin-top:25px;margin-right:-25px;>".$direction["cilengsi-bandung"]."<BR />Cileungsi - Bandung</div><button type='submit' name='btn' class='button'>rute</button></li><li></li>";}
+                                  echo '<img src=image/angkot.png style=width:150px;float:left;margin-top:-10px;><div       style=margin-top:25px;margin-right:-25px;>'.$direction["cilengsi-bandung"].'<BR />Cileungsi - Bandung</div>';
+                                  echo '<button type="submit" name="btn" class="button">rute</button></li><li></li>';}
                                 ?>
                               </ul>
                             </li><ol></ol>
@@ -60,13 +61,15 @@
                     <li>
                       <span align="center"style="margin-top:-20px; padding-bottom:10px;">PETA GOOGLE MAPS<hr></span>
                       <div class="container-narrow">
+                        <p class='lead'>
+                          Rute  Google maps
+                        </p>                        
                         <div class='span8'>
                           <?php
                             if(isset($_POST['btn'])) {
-                              $saddr = "cileungsi";
-                              $daddr = "bogor";
-              
-                              include ('maps.php');
+                              $saddr = "cipeucang";
+                              $daddr = "cileungsi";
+                              include('direction/direction.php');
                           }?>
                         </div>
                       </div>
@@ -76,7 +79,7 @@
                 <li> <!-- Ulangi lagi tiga kali sehingga sekarang kita punya 6 list --></li>
               </ul>
             </div>
-            </footer>
+         </footer>
         </form>
     </body>
 </html>
