@@ -8,8 +8,8 @@
 </head> 
 <body style="font-family: Arial; font-size: 14px;"> 
  <div class='row'>
- 	  <div id="panel"   style="width: 300px; float:left;"></div> 
-     <div id="map"  style="width: 300px; height: 500px;float:left; margin-top:-1010px; margin-left:310px;"></div> 
+ 	  <div id="panel"   style="width: 220px; float:left;"></div> 
+     <div id="map"  style="width: 300px; height: 500px;float:left; margin-top:-1150px; margin-left:290px;"></div> 
    
 </div>
   

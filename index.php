@@ -68,7 +68,7 @@
                           <?php
                             if(isset($_POST['btn'])) {
                               $saddr = "cipeucang";
-                              $daddr = "cileungsi";
+                              $daddr = "jonggol";
                               include('direction/direction.php');
                           }?>
                         </div>
